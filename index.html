@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Greeting Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Create Your Festival Greeting Card</h1>
+        <div class="input-section">
+            <label for="language-select">Select Language:</label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+        </div>
+
+        <div class="input-section">
+            <label for="festival-select" id="festival-label" >Choose a Festival:</label>
+            <select id="festival-select" required>
+                <option value="diwali">Diwali</option>
+                <option value="christmas">Christmas</option>
+                <option value="eid">Eid</option>
+                <option value="newyear">New Year</option>
+            </select>
+        </div>
+
+        
+        <div class="input-section">
+            <label for="name-color">Select Name Color:</label>
+            <input type="color" id="name-color" value="#ffffff"> <!-- Default white color -->
+            <label for="name-input" id="name-label">Enter Your Name:</label>
+            <input type="text" id="name-input" placeholder="Your Name" required>
+        </div>
+        
+        <div class="input-section">
+            <label for="message-color">Select Message Color:</label>
+            <input type="color" id="message-color" value="#ffffff"> <!-- Default white color -->
+            <label for="message-input" id="message-label">Enter Your Message:</label>
+            <textarea id="message-input" placeholder="Type your message here..." required></textarea>
+        </div>
+        <div class="input-section">
+            <label for="image-upload" id="upload-label">Choose a Festival Image :</label>
+            <input type="file" id="image-upload" accept="image/*" required>
+        </div>
+        <div class="card-preview">
+            <canvas id="cardCanvas" width="450" height="300"></canvas>
+        </div>
+        <button id="download-btn">Download Card</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
